@@ -348,8 +348,9 @@ var pJS = function(tag_id, params){
       this.vx = velbase.x;
       this.vy = velbase.y;
       if(pJS.particles.move.random){
-        this.vx = this.vx * (Math.random());
-        this.vy = this.vy * (Math.random());
+        var random = Math.random() + 0.5;
+        this.vx = this.vx * random;
+        this.vy = this.vy * random;
       }
     }else{
       this.vx = velbase.x + Math.random()-0.5;
